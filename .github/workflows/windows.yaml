@@ -10,8 +10,13 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - name: Cloning GitHub Repo 
         uses: actions/checkout@v3
+      - name: Print all Environment Variables using Command
+        run: SET
+        shell: cmd
+      - name: Print Environment Variables using Power Shell
+        run: "[System.Environment]::GetEnvironmentVariables()"
       - name: List files in workspace
         run: dir ${{ github.workspace }}
-      - name: Print all Environment Variables
-        run: SET
+      - name: Change Dir to workspace folder and execute hello.bat file
+        run: cd ${{ github.workspace }}; hello.bat
         shell: cmd
