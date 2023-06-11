@@ -12,4 +12,4 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "GitHub Repository URL is ${{ github.repositoryUrl }} and repo is ${{ github.repository }} & branch is ${{ github.ref }} "
       - run: git clone ${{ github.server_url }}/${{ github.repository }}
-      - run: ls ${{ github.repository }}
+      - run: pwd; ls
