@@ -16,7 +16,7 @@ jobs:
       - name: Print Environment Variables using Power Shell
         run: "[System.Environment]::GetEnvironmentVariables()"
       - name: List files in workspace
-        run: dir ${{ github.workspace }}
+        run: dir
       - name: Change Dir to workspace folder and execute hello.bat file
-        run: ${{ github.workspace }}\hello.bat
+        run: hello.bat
         shell: cmd
