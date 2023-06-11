@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World from Ubuntu Runner!!"
-      - run: echo "GitHub Repo URL is ${{ github.repository }}"
+      - run: echo "GitHub Repo URL is ${{ github.repositoryUrl }}"
