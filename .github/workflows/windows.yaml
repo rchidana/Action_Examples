@@ -15,8 +15,8 @@ jobs:
         shell: cmd
       - name: Print Environment Variables using Power Shell
         run: "[System.Environment]::GetEnvironmentVariables()"
-      - name: List files in workspace
-        run: dir
-      - name: Change Dir to workspace folder and execute hello.bat file
+      - name: List files in present working directory
+        run: dir 
+      - name: Execute hello.bat file (no need to change folders)
         run: hello.bat
         shell: cmd
